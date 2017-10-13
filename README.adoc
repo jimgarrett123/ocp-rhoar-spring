@@ -1,6 +1,5 @@
 = Red Hat OpenShift Application Runtimes - Spring Boot Training
-Thomas Qvarnstrom <tqvarnst@redhat.com>
-Greg Hoelzer <ghoelzer@redhat.com>
+Thomas Qvarnstrom <tqvarnst@redhat.com> Greg Hoelzer <ghoelzer@redhat.com>
 
 :sectnums!:
 :toc: left
@@ -23,7 +22,7 @@ This repository is the used to develop training materials for Red Hat OpenShift 
 
 == Introduction
 
-This is a lab aimed at enabling JavaEE developers using Spring Boot and the most common frameworks and Microservices architect to build, deploy and test their components on the OpenShift Container Application platform. 
+This is a lab aimed at enabling JavaEE developers using Spring Boot, common frameworks and Microservices architecture to build, deploy and test their components on the OpenShift Container Application platform. 
 
 Here is a short list for the available exercises:
 
