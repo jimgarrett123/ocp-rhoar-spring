@@ -3,7 +3,7 @@
 :data-uri:
 :toc2:
 
-== Lab - Deploying on OpenShift Application Runtimes
+== Lab 1 - Deploying on OpenShift Application Runtimes
 
 In this lab, you will learn how to take a spring application and enable it to run on RHOAR.
 
