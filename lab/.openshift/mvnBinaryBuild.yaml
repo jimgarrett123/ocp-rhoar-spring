@@ -31,12 +31,12 @@ spec:
 
               node("maven") {
                 stage("Checkout") {
-                  git url: "https://github.com/ghoelzer-rht/spring-enablement.git", branch: "solution"
+                  git url: "https://github.com/ghoelzer-rht/ocp-rhoar-spring.git", branch: "master"
                 }
 
                 stage("Build Spring Boot JAR") {
-                  sh "mvn clean package -Popenshift --file lab4/pom.xml"
-                  stash name:"jar", includes:"lab4/target/product-catalog.jar"
+                  sh "mvn clean package -Popenshift --file lab/pom.xml"
+                  stash name:"jar", includes:"lab/target/product-catalog.jar"
                 }
               }
 
@@ -45,7 +45,7 @@ spec:
                   openshiftDeploy deploymentConfig: "product-catalog"
                 }
                 stage("Smoke Test") {
-                  sh 'curl http://product-catalog-product-catalog-demo01.cloudapps.keyvan.com/admin/productlist | grep -i "Admin - Product List"'
+                  sh 'curl http://product-catalog-spring-rhoar-lab01.cloudapps.keyvan.com/admin/productlist | grep -i "Admin - Product List"'
                 }
                 stage("Tag and Release Image") {
                   input "Promote next Release"
