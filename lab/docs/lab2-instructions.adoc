@@ -11,6 +11,8 @@ In this lab, you will learn how to create a Jenkins 2.0 Build Pipeline for our s
 
 == Fixing product-catalog Deployment Configuration
 
+In this step, we will update the initially created Deployment Configuration, to enable our Build Pipeline to control application deployment:
+
 1. From the OpenShift Web Console, select the *product-catalog* Deployment
 2. Under the *Actions* Drop Down on the upper right, select *Edit*
 3. Scroll down to the *Images* section, *uncheck* both options that *automatically start new deployments*
