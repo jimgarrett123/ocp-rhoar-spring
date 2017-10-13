@@ -6,7 +6,7 @@ Thomas Qvarnstrom and Greg Hoelzer
 :revnumber: 1.1
 :revdate: 2017-10-13
 
-This repository is the used to develop training materials for Red Hat OpenShift Application Runtimes. This module/lab focuses on https://projects.spring.io/spring-boot/[Spring Boot]. The main authors of _{doctitle}_ is *{author}*, Red Hat and the current version ({revnumber}) was last updated on {revdate}.
+This repository is the used to develop training materials for Red Hat OpenShift Application Runtimes. This module/lab focuses on https://projects.spring.io/spring-boot/[Spring Boot]. The main authors of _{doctitle}_ are *{author}*, Red Hat and the current version ({revnumber}) was last updated on {revdate}.
 
 == Lab Overview
 
