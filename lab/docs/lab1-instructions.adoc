@@ -40,7 +40,7 @@ With
 </parent>
 ----
 
-1. Add properties for spring-boot-bom version, postgres version and mvn spring-booy plugin version
+1. Add properties for spring-boot-bom version, postgres version and mvn spring-boot plugin version
 +
 In the `<properties>` section add:
 +
