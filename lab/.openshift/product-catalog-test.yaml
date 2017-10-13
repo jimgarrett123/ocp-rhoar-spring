@@ -1,0 +1,105 @@
+apiVersion: v1
+kind: DeploymentConfig
+metadata:
+  labels:
+    app: product-catalog-test
+    group: com.redhat.coolstore
+    provider: fabric8
+    version: 0.0.1-SNAPSHOT
+  name: product-catalog-test
+spec:
+  replicas: 1
+  revisionHistoryLimit: 2
+  selector:
+    app: product-catalog-test
+    group: com.redhat.coolstore
+    provider: fabric8
+  strategy:
+    activeDeadlineSeconds: 21600
+    resources: {}
+    rollingParams:
+      intervalSeconds: 1
+      maxSurge: 25%
+      maxUnavailable: 25%
+      timeoutSeconds: 3600
+      updatePeriodSeconds: 1
+    type: Rolling
+  template:
+    metadata:
+      labels:
+        app: product-catalog-test
+        group: com.redhat.coolstore
+        provider: fabric8
+        version: 0.0.1-SNAPSHOT
+    spec:
+      containers:
+      - env:
+        - name: DB_USERNAME
+          valueFrom:
+            secretKeyRef:
+              key: user
+              name: my-database-secret
+        - name: DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              key: password
+              name: my-database-secret
+        - name: JAVA_OPTIONS
+          value: -Dspring.profiles.active=openshift
+        - name: KUBERNETES_NAMESPACE
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+        image: docker-registry.default.svc:5000/product-catalog-demo01/product-catalog:next-release
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /health
+            port: 8080
+            scheme: HTTP
+          initialDelaySeconds: 180
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 1
+        name: spring-boot
+        ports:
+        - containerPort: 8080
+          name: http
+          protocol: TCP
+        - containerPort: 9779
+          name: prometheus
+          protocol: TCP
+        - containerPort: 8778
+          name: jolokia
+          protocol: TCP
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /health
+            port: 8080
+            scheme: HTTP
+          initialDelaySeconds: 10
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 1
+        resources: {}
+        securityContext:
+          privileged: false
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+  test: false
+  triggers:
+  - imageChangeParams:
+      containerNames:
+      - spring-boot
+      from:
+        kind: ImageStreamTag
+        name: product-catalog:next-release
+    type: ImageChange

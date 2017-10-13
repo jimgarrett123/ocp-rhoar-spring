@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: product-catalog-test
+    expose: "true"
+    group: com.redhat.coolstore
+    provider: fabric8
+    version: 0.0.1-SNAPSHOT
+  name: product-catalog-test
+spec:
+  ports:
+  - name: http
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: product-catalog-test
+    group: com.redhat.coolstore
+    provider: fabric8
+  sessionAffinity: None
+  type: ClusterIP
