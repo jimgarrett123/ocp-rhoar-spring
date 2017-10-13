@@ -9,9 +9,10 @@ In this lab, you will learn how to create a Jenkins 2.0 Build Pipeline for our s
 
 :numbered:
 
-== Fixing project setup
+== Fixing product-catalog Deployment Configuration
 
-1. Replace the `spring-boot-starter-parent` with RHOAR `booster-parent`
+1. From the OpenShift Web Console, select the *product-catalog* Deployment
+2. Under the *Actions* Drop Down on the upper right, select *Edit*
 +
 Replace
 +
