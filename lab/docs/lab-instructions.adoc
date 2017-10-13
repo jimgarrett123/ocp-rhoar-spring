@@ -9,7 +9,7 @@ In this lab, you will learn how to take a spring application and enable it to ru
 
 Spring Boot project from http://spring.start.io uses a parent project called `spring-boot-starter-parent`. This is where all the maven magic regarding versions etc are happening. Similary you will find that project from http://launch.openshift.io has a parent project. However the later also has a dependencyManagement in the actual project.
 
-In this lab we will walk you through how to take a customers Spring Boot project and convert it into RHOAR.
+In this lab we will walk you through how to take an existing Spring Boot project and convert it into RHOAR.
 
 :numbered:
 
@@ -76,7 +76,7 @@ In the `<build><plugins><plugin>` section add
     mvn clean verify
 
 == Adding Red Hat supported tomcat dependency
-In order to tell spring to use the version of that Red Hat support we exclicitrly have to add dependency to `tomcat-juli` before the `spring-boot-starter-tomcat`.
+In order to tell spring to use the version of tomcat that Red Hat supporst we have to add dependency to `tomcat-juli` before the `spring-boot-starter-tomcat`.
 
 1. Add the following dependency after the `<!-- Add Apache Tomcat dependency -\->` in the pom.xml
 +
@@ -152,7 +152,7 @@ stringData:
   password: "secret"
 ----
 
-== Add a route definition
+== Add a route definition that will create the Public Hostname/URL for our Application:
 
 1. If it doesn't already exist create a directory called `src/main/fabric8`
 
