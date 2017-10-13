@@ -26,4 +26,4 @@ This is a lab aimed at enabling JavaEE developers using Spring Boot, common fram
 
 Here is a short list for the available exercises:
 
-* link:lab/docs/lab-instructions.adoc[Exercise - How to use Spring Boot on RHOAR and OpenShift]
+* link:lab/docs/lab1-instructions.adoc[Exercise - How to use Spring Boot on RHOAR and OpenShift]
