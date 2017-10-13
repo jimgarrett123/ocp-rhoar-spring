@@ -27,3 +27,12 @@ In this step, we will create and update our Build Pipeline, deploying a Jenkins 
 oc create -f mvnBinaryBuild.yaml
 +
 3. You shoud see the message *buildconfig "product-catalog-mvn-pipeline" created* if the command was successful
+4. From the OpenShift Web Console, under *Other Resources*, you should now see that a *Jenkins* deployment was created and in the process of starting up:
++
+Once started, verify you can login to your Jenkins instance via the created Route using your OpenShift Credentials
+Select and review the Jenkins Pipeline Job created, and DSL for our Pipeline.
++
+5. From the OpenShift Web Console, select *Builds* then *Pipelines*, then our newly created *product-catalog-mvn-pipeline*
++
+Under the *Actions* Drop Down on the upper right select *Edit*
++
