@@ -1,5 +1,5 @@
 = Red Hat OpenShift Application Runtimes - Spring Boot Training
-Thomas Qvarnstrom <tqvarnst@redhat.com> Greg Hoelzer <ghoelzer@redhat.com>
+Thomas Qvarnstrom <tqvarnst@redhat.com> | Greg Hoelzer <ghoelzer@redhat.com>
 
 :sectnums!:
 :toc: left
