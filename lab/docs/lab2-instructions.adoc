@@ -42,6 +42,5 @@ Review the Jenkins DSL for each Stage of the Pipeline, the following updates are
 +
 * Checkout Stage - Update the Git Repo to your personal repo that you forked from this Lab Repo
 * Smoke Test - Update the curl URL to the Route generated for your specific project
-+
 Save your changes and then Start the Pipeline to verify successful execution
 +
