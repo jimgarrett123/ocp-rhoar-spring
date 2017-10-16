@@ -44,3 +44,8 @@ Review the Jenkins DSL for each Stage of the Pipeline, the following updates are
 * Smoke Test - Update the curl URL to the Route generated for your specific project
 * Save your changes and then Start the Pipeline to verify successful execution
 +
+== Tag the product-catalog Image for Release
+
+In the previous step, our Build Pipeline introducted a Manual step used to trigger release of the current build.  In this step, we will "approve" the build for release and verify the image was successfully tagged:
+
+1. From the Web Console, under the product-catalog Application, click the *Tag and Relase* Pipeline step and allow the Stage to proceed.
