@@ -37,4 +37,7 @@ Once started, verify you can login to your Jenkins instance via the created Rout
 5. From the OpenShift Web Console, select *Builds* then *Pipelines*, then our newly created *product-catalog-mvn-pipeline*
 +
 Under the *Actions* Drop Down on the upper right select *Edit*
+Review the Jenkins DSL for each Stage of the Pipeline, the following updates are needed for the Pipeline to execute against your specific project:
+* Checkout Stage - Update the Git Repo to your personal repo that you forked from this Lab Repo
+* Smoke Test Test - Update the curl URL to the Route generated for your specific project
 +
