@@ -24,9 +24,10 @@ In this step, we will create and update our Build Pipeline, deploying a Jenkins 
 1. From command line and where this project was cloned, navigate to the */lab/.openshift* directory
 2. Ensure you are logged into OpenShift and your Lab Project, then execute the following *oc* command:
 +
----
+[source,bash]
+----
 oc create -f mvnBinaryBuild.yaml
----
+----
 +
 3. You shoud see the message *buildconfig "product-catalog-mvn-pipeline" created* if the command was successful
 4. From the OpenShift Web Console, under *Other Resources*, you should now see that a *Jenkins* deployment was created and in the process of starting up:
