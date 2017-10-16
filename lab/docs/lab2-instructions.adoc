@@ -26,7 +26,7 @@ In this step, we will create and update our Build Pipeline, deploying a Jenkins 
 +
 [source,bash]
 ----
-*oc create -f mvnBinaryBuild.yaml*
+oc create -f mvnBinaryBuild.yaml
 ----
 +
 3. You shoud see the message *buildconfig "product-catalog-mvn-pipeline" created* if the command was successful
