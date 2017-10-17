@@ -52,3 +52,4 @@ Save your changes and then Start the Pipeline to verify successful execution
 In the previous step, our Build Pipeline introducted a Manual step used to trigger release of the current build.  In this step, we will "approve" the build for release and verify the image was successfully tagged:
 
 1. From the Web Console, under the product-catalog Application, click the *Tag and Relase* Pipeline step and allow the Stage to proceed.
+2. From the Web Console, select Builds, Images to display the existing Imagestreams.  Select the product-catalog imagestream and verify that there is a *latest* and *next-release* tag.
