@@ -16,6 +16,8 @@ In this step, we will update the initially created Deployment Configuration, to 
 1. From the OpenShift Web Console, select the *product-catalog* Deployment
 2. Under the *Actions* Drop Down on the upper right, select *Edit*
 3. Scroll down to the *Images* section, *uncheck* both options that *automatically start new deployments*
++
+image::https://github.com/ghoelzer-rht/ocp-rhoar-spring/blob/master/lab/images/spring-lab-dcupdate1.png[]
 
 == Creating product-catalog Build Pipeline
 
