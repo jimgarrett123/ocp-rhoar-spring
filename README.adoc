@@ -22,7 +22,9 @@ This repository is the used to develop training materials for Red Hat OpenShift 
 
 == Introduction
 
-This is a lab aimed at enabling JavaEE developers using Spring Boot, common frameworks and Microservices architecture to build, deploy and test their components on the OpenShift Container Application platform. 
+This is a lab aimed at enabling JavaEE developers using Spring Boot, common frameworks and Microservices architecture to build, deploy and test their components on the OpenShift Container Application platform.  
+
+*Clone this repo into a local working directory if you wish to perform the lab excersises*
 
 Here is a short list for the available exercises:
 
