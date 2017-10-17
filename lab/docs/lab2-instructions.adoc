@@ -53,6 +53,8 @@ Checkout Stage - Update the Git Repo to your personal repo that you forked from 
 Smoke Test - Update the curl URL to the Route generated for your specific project
 Save your changes and then Start the Pipeline to verify successful execution
 ----
++
+image::https://github.com/ghoelzer-rht/ocp-rhoar-spring/blob/master/lab/images/spring-lab-pipeline2.png[]
 
 == Tag the product-catalog Image for Release
 
@@ -60,6 +62,8 @@ In the previous step, our Build Pipeline introducted a Manual step used to trigg
 
 1. From the Web Console, under the product-catalog Application, click the *Tag and Relase* Pipeline step and allow the Stage to proceed.
 2. From the Web Console, select Builds, Images to display the existing Imagestreams.  Select the product-catalog imagestream and verify that there is a *latest* and *next-release* tag.
++
+image::https://github.com/ghoelzer-rht/ocp-rhoar-spring/blob/master/lab/images/spring-lab-imagestream1.png[]
 
 == Optional Jenkins Build Pipeline optimizations
 To speed up your Jenkins Maven Build times, local Maven Mirrors can be used via the MAVEN_MIRROR_URL enivornment variable, added to your Build Pipeline Configuration.  Also, persistent storage can be added to your Jenkin's Slave Pod/Container, review the following blog for instructions - https://blog.openshift.com/decrease-maven-build-times-openshift-pipelines-using-persistent-volume-claim/
