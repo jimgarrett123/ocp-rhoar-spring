@@ -1,1 +1,32 @@
-//Lab 3, A-B Test and Blue/Green Deployment Example
+:noaudio:
+:scrollbar:
+:data-uri:
+:toc2:
+
+== Lab 3 - Creating an OpenShift Test Release and A/B Test or Blue/Green Release Deployment
+
+In this lab, we will use an OpenShift Template to replicate the product-catalog application deployment, using the *next-release* imagestream tag.  We will then review the ability of OpenShift Routes to split application network traffic across multiple OpenShift/K8S Services, enabling either A-B Test or Blue/Green Release Deployments.
+
+:numbered:
+
+== Creating product-catalog Test Deployment
+
+In this step, we will use an YAML Template to generate a product-catalog Test deployment in our OpenShift project:
+
+1. From command line and where this project was cloned, navigate to the */lab/.openshift* directory
+2. Ensure you are logged into OpenShift and your Lab Project, then execute the following *oc* command:
++
+[source,bash]
+----
+oc process -f product-catalog-test-tmp.yaml | oc create -f -
+----
++
+If the command executed successfully, you should see the following output
++
+[source,bash]
+----
+deploymentconfig "product-catalog-test" created
+service "product-catalog-test" created
+route "product-catalog-test" created
+----
+
