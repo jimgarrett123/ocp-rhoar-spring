@@ -36,9 +36,12 @@ oc create -f mvnBinaryBuild.yaml
 +
 Once started, verify you can login to your Jenkins instance via the created Route using your OpenShift Credentials.  Select and review the Jenkins Pipeline Job created, and DSL for our Pipeline.
 +
+image::https://github.com/ghoelzer-rht/ocp-rhoar-spring/blob/master/lab/images/spring-lab-jenkins0.png[]
 5. From the OpenShift Web Console, select *Builds* then *Pipelines*, then our newly created *product-catalog-mvn-pipeline*
 +
 Under the *Actions* Drop Down on the upper right select *Edit*
++
+image::https://github.com/ghoelzer-rht/ocp-rhoar-spring/blob/master/lab/images/spring-lab-jenkins1.png[]
 +
 Review the Jenkins DSL for each Stage of the Pipeline, the following updates are needed for the Pipeline to execute against your specific project:
 +
