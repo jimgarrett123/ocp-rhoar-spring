@@ -47,10 +47,6 @@ spec:
                 stage("Smoke Test") {
                   sh 'curl http://product-catalog-spring-rhoar-lab01.cloudapps.keyvan.com/admin/productlist | grep -i "Admin - Product List"'
                 }
-                stage("Tag and Release Image") {
-                  input "Promote next Release"
-                  openshiftTag alias: 'false', apiURL: '', authToken: '', destStream: 'product-catalog', destTag: 'next-release', destinationAuthToken: '', destinationNamespace: '', namespace: '', srcStream: 'product-catalog', srcTag: 'latest', verbose: 'false'
-                }
               }
            }
         } catch (err) {
@@ -59,6 +55,12 @@ spec:
            currentBuild.result = 'FAILURE'
            throw err
         }
+        node {
+          stage("Tag and Release Image") {
+            input "Promote next Release"
+            openshiftTag alias: 'false', apiURL: '', authToken: '', destStream: 'product-catalog', destTag: 'next-release', destinationAuthToken: '', destinationNamespace: '', namespace: '', srcStream: 'product-catalog', srcTag: 'latest', verbose: 'false'
+          }
+       }
     type: JenkinsPipeline
   triggers:
   - github:
