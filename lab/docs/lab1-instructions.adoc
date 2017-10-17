@@ -42,5 +42,5 @@ For the purpose of this lab we will walk you through how to take the completed S
 image::https://github.com/ghoelzer-rht/ocp-rhoar-spring/blob/master/lab/images/spring-lab-deployment1.png[]
 
 1. Within the *product-catalog* application, open the URL from the created *Route* in another browser tab and verify the Spring application is working:
-<image goes here>
-
++
+image::https://github.com/ghoelzer-rht/ocp-rhoar-spring/blob/master/lab/images/spring-lab-app1.png[]
