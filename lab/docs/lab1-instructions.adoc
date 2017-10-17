@@ -37,9 +37,9 @@ For the purpose of this lab we will walk you through how to take the completed S
 
 1. From the Web Console Home Page, scroll down and select the Project used for this Lab
 
-1. From the Overview Page of your Project, you should see the following Applications and Components running once they have completed deployment 
+1. From the Overview Page of your Project, you should see the following Applications and Components running once they have completed deployment:
 +
-[Deployment](https://github.com/ghoelzer-rht/ocp-rhoar-spring/blob/master/lab/images/spring-lab-deployment1.png)
+image::https://github.com/ghoelzer-rht/ocp-rhoar-spring/blob/master/lab/images/spring-lab-deployment1.png[]
 
 1. Within the *product-catalog* application, open the URL from the created *Route* in another browser tab and verify the Spring application is working:
 <image goes here>
