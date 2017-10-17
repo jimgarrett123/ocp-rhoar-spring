@@ -7,9 +7,9 @@
 
 In this lab, you will learn how to take an existing Spring Boot application that has been converted to use RHOAR (Red Hat OpenShift Application Runtimes).  RHOAR is a collection of Red Hat Supported Microservice Framworks optimized for deployment on OpenShift.  See http://launch.openshift.io for more information on the complete set of languages/technologies supported.
 
-The Spring Boot application we will be deploying is the completed version of the Product Catalog MVC Web App, using a PostgreSQL DB for persistence.  You can review the updates made to the base SPring application to use the RHOAR framework components at https://github.com/rhoar-enablement/spring/blob/master/lab4/docs/lab4-instructions.adoc .
+The Spring Boot application we will be deploying is a basic Product Catalog MVC Web App, using a PostgreSQL DB for persistence.  You can review the updates made to the original Spring application to use the RHOAR framework components at https://github.com/rhoar-enablement/spring/blob/master/lab4/docs/lab4-instructions.adoc .
 
-For the purpose of this lab we will walk you through how to take the complete Spring Boot/RHOAR project and deploy it to OpenShift. Before starting, ensure you have *cloned this repo into a local working directory* and have the ability to *create or access a personal OpenShift project* for this Lab.
+For the purpose of this lab we will walk you through how to take the completed Spring Boot/RHOAR project and deploy it to OpenShift. Before starting, ensure you have *cloned this repo into a local working directory* and have the ability to *create or access a personal OpenShift project* for this Lab.
 
 :numbered:
 
@@ -30,3 +30,15 @@ For the purpose of this lab we will walk you through how to take the complete Sp
 1. Build and deploy your project
 +
     mvn clean fabric8:deploy -Popenshift
+
+== Verify Deployment and Application within OpenShift
+
+1. Login to the OpenShift Web Console (Get URL from your OpenShift admin)
+
+1. From the Web Console Home Page, scroll down and select the Project used for this Lab
+
+1. From the Overview Page of your Project, you should see the following Applications and Components running once they have completed deployment:
+<image goes here>
+1> Within the *product-catalog* application, open the URL from the created *Route* in another browser tab and verify the Spring application is working:
+<image goes here>
+
