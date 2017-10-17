@@ -55,4 +55,4 @@ In the previous step, our Build Pipeline introducted a Manual step used to trigg
 2. From the Web Console, select Builds, Images to display the existing Imagestreams.  Select the product-catalog imagestream and verify that there is a *latest* and *next-release* tag.
 
 == Optional Jenkins Build Pipeline optimizations
-To speed up your Jenkins Maven Build times, local Maven Mirrors can be used via the MAVEN_MIRROR_URL variable, add to your S2I Build Configuration.  Also, persistent storage can be added to your Jenkin's Slave Pod/Container, review the following blog for instructions - https://blog.openshift.com/decrease-maven-build-times-openshift-pipelines-using-persistent-volume-claim/
+To speed up your Jenkins Maven Build times, local Maven Mirrors can be used via the MAVEN_MIRROR_URL enivornment variable, added to your Build Pipeline Configuration.  Also, persistent storage can be added to your Jenkin's Slave Pod/Container, review the following blog for instructions - https://blog.openshift.com/decrease-maven-build-times-openshift-pipelines-using-persistent-volume-claim/
