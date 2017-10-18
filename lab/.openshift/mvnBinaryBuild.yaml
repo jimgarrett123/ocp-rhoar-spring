@@ -17,7 +17,7 @@ spec:
     type: None
   strategy:
     jenkinsPipelineStrategy:
-      jenkinsfile: |-
+      jenkinsfile: |
         try {
            timeout(time: 20, unit: 'MINUTES') {
               def appName="product-catalog"
@@ -60,7 +60,7 @@ spec:
             input "Promote next Release"
             openshiftTag alias: 'false', apiURL: '', authToken: '', destStream: 'product-catalog', destTag: 'next-release', destinationAuthToken: '', destinationNamespace: '', namespace: '', srcStream: 'product-catalog', srcTag: 'latest', verbose: 'false'
           }
-       }
+        }
     type: JenkinsPipeline
   triggers:
   - github:

@@ -60,7 +60,7 @@ objects:
               fieldRef:
                 apiVersion: v1
                 fieldPath: metadata.namespace
-          image: docker-registry.default.svc:5000/product-catalog-demo01/product-catalog:next-release
+          image: product-catalog:next-release
           imagePullPolicy: IfNotPresent
           livenessProbe:
             failureThreshold: 3
@@ -112,16 +112,8 @@ objects:
         from:
           kind: ImageStreamTag
           name: product-catalog:next-release
-          namespace: product-catalog-demo01
       type: ImageChange
     - type: ConfigChange
-  status:
-    availableReplicas: 0
-    latestVersion: 0
-    observedGeneration: 0
-    replicas: 0
-    unavailableReplicas: 0
-    updatedReplicas: 0
 - apiVersion: v1
   kind: Service
   metadata:
@@ -160,7 +152,7 @@ objects:
       version: 0.0.1-SNAPSHOT
     name: product-catalog-test
   spec:
-    host: product-catalog-test-product-catalog-demo01.cloudapps.keyvan.com
+    host:
     port:
       targetPort: http
     to:
@@ -168,12 +160,3 @@ objects:
       name: product-catalog-test
       weight: 100
     wildcardPolicy: None
-  status:
-    ingress:
-    - conditions:
-      - lastTransitionTime: 2017-10-12T19:36:14Z
-        status: "True"
-        type: Admitted
-      host: product-catalog-test-product-catalog-demo01.cloudapps.keyvan.com
-      routerName: router
-      wildcardPolicy: None
