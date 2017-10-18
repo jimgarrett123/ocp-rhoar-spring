@@ -54,5 +54,6 @@ image::https://github.com/ghoelzer-rht/ocp-rhoar-spring/blob/master/lab/images/s
 +
 image::https://github.com/ghoelzer-rht/ocp-rhoar-spring/blob/master/lab/images/spring-lab-release3.png[]
 
+4. We will now update the *product-catalog-test* Route to split traffic across *both* the *product-catalog* and *product-catalog-test* Services.  From the Web Console, select *Applications*, *Routes*, then the *product-catalog-test* Route.  Update the Route as shown below:
 
 
