@@ -69,3 +69,7 @@ image::https://github.com/ghoelzer-rht/ocp-rhoar-spring/blob/master/lab/images/s
 Now open a new Browser window using a *private session* for the *product-catalog-test* Route again.  It may take a couple of tries of opening new Browser window's with private sessions, depending on where we are at in the Round-Robin routing, but you should be able to view the other version of the Application:
 
 image::https://github.com/ghoelzer-rht/ocp-rhoar-spring/blob/master/lab/images/spring-lab-abtest2.png[]
+
+== Demonstrate a Blue/Green Product Catalog Deployment
+
+In this step, we will demonstrate a Blue/Green deployment, using the *product-catalog-test* application deployment within our OpenShift Project, leveraging the ability to split or direct http network traffic across multiple OpenShift/K8S Services:
