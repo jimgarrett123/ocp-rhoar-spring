@@ -58,5 +58,9 @@ image::https://github.com/ghoelzer-rht/ocp-rhoar-spring/blob/master/lab/images/s
 +
 image::https://github.com/ghoelzer-rht/ocp-rhoar-spring/blob/master/lab/images/spring-lab-release4.png[]
 
+The product-catalog-test application deployment should be updated as shown below:
++
+image::https://github.com/ghoelzer-rht/ocp-rhoar-spring/blob/master/lab/images/spring-lab-release5.png[]
+
 
 
