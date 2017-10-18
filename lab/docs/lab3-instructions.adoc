@@ -76,3 +76,9 @@ In this step, we will demonstrate a Blue/Green deployment, using the *product-ca
 
 1. Now that we have created Product Catalog release 1.01, let's make that available to the our Testing team that is testing against our *product-catalog-test* Route, by forcing *all* traffic to use our latest application build.  Select *Applications*, *Routes*, then the *product-catalog-test* Route.  Edit the Route and update/save the configuration as shown below:
 
++
+image::https://github.com/ghoelzer-rht/ocp-rhoar-spring/blob/master/lab/images/spring-lab-bluegreen1.png[]
+
+2. To verify that all Browser sessions point to the latest application build, refresh the page used on both Browser windows we use for our A/B Test.  They should now both display *Admin - Product List v1.01*.
+
+
