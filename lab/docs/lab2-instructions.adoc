@@ -9,7 +9,7 @@ In this lab, you will learn how to create a Jenkins 2.0 Build Pipeline for our S
 
 :numbered:
 
-== Fixing product-catalog Deployment Configuration
+== Update the product-catalog Deployment Configuration
 
 In this step, we will update the initially created Deployment Configuration, to enable our Build Pipeline to control application deployment:
 
