@@ -49,5 +49,11 @@ In this step, we will update the the product catalog app and before releasing it
 2. Kick-off the *product-catalog-mvn-pipeline* build pipeline, to create and deploy a new container image with our update.  *Do not* execute the Tag and Release step.  At this point, we should now have two versions of our Product Catalog application deployed, represented by the *latest* (new build at version 1.01) and *next-release* (original build at version 1.00).
 
 3. Go ahead and open both versions of the application in two different Browser tabs, using the *product-catalog* and *product-catalog-test* Routes and validate that they each display the different html page header.
++
+image::https://github.com/ghoelzer-rht/ocp-rhoar-spring/blob/master/lab/images/spring-lab-release2.png[]
++
+image::https://github.com/ghoelzer-rht/ocp-rhoar-spring/blob/master/lab/images/spring-lab-release3.png[]
+
+4. We will now update the *product-catalog-test* Route to split traffic across *both* the *product-catalog* and *product-catalog-test* Services.  From the Web Console, select *Applications*, *Routes*, then the *product-catalog-test* Route.  Select *Edit* from the *Actions* Drop-Down list and update the Route as shown below:
 
 
