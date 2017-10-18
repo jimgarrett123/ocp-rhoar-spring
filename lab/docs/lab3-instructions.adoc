@@ -61,6 +61,9 @@ image::https://github.com/ghoelzer-rht/ocp-rhoar-spring/blob/master/lab/images/s
 The product-catalog-test application deployment should be updated as shown below:
 
 image::https://github.com/ghoelzer-rht/ocp-rhoar-spring/blob/master/lab/images/spring-lab-release5.png[]
+5. We know have the ability to conduct A/B Test Scenerios using the *product-catalog-test* Route which will evenly disperse http client sessions across the two application versions we have deployed in our OpenShift project.  See this in action, open a Browser tab in your current session for the *product-catalog-test* Route:
+<image goes here>
+
 
 
 
