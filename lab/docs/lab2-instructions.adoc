@@ -5,7 +5,7 @@
 
 == Lab 2 - Creating an OpenShift Application Build Pipeline
 
-In this lab, you will learn how to create a Jenkins 2.0 Build Pipeline for our spring application using a Maven Binary/S2I build. We enable the Pipeline to Deploy the App, Smoke Test it, and introduce a Manual Step to Tag the created Container Imagestream for Release.
+In this lab, you will learn how to create a Jenkins 2.0 Build Pipeline for our Spring application using a Maven Binary/S2I build. We enable the Pipeline to Deploy the App, Smoke Test it, and introduce a Manual Step to Tag the created Container Imagestream for Release.
 
 :numbered:
 
