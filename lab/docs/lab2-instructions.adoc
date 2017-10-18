@@ -5,11 +5,11 @@
 
 == Lab 2 - Creating an OpenShift Application Build Pipeline
 
-In this lab, you will learn how to create a Jenkins 2.0 Build Pipeline for our spring application using a Maven Binary/S2I build. We enable the Pipeline to Deploy the App, Smoke Test it, and introduce a Manual Step to Tag the created Container Imagestream for Release.
+In this lab, you will learn how to create a Jenkins 2.0 Build Pipeline for our Spring application using a Maven Binary/S2I build. We enable the Pipeline to Deploy the App, Smoke Test it, and introduce a Manual Step to Tag the created Container Imagestream for Release.
 
 :numbered:
 
-== Fixing product-catalog Deployment Configuration
+== Update the product-catalog Deployment Configuration
 
 In this step, we will update the initially created Deployment Configuration, to enable our Build Pipeline to control application deployment:
 
@@ -19,11 +19,11 @@ In this step, we will update the initially created Deployment Configuration, to 
 +
 image::https://github.com/ghoelzer-rht/ocp-rhoar-spring/blob/master/lab/images/spring-lab-dcupdate1.png[]
 
-== Creating product-catalog Build Pipeline
+== Create the product-catalog Build Pipeline
 
 In this step, we will create and update our Build Pipeline, deploying a Jenkins 2.0 instance into our OpenShift project:
 
-1. From command line and where this project was cloned, navigate to the */lab/.openshift* directory
+1. From the command line and where this project was cloned, navigate to the */lab/.openshift* directory
 2. Ensure you are logged into OpenShift and your Lab Project, then execute the following *oc* command:
 +
 [source,bash]
@@ -34,27 +34,36 @@ oc create -f mvnBinaryBuild.yaml
 3. You shoud see the message *buildconfig "product-catalog-mvn-pipeline" created* if the command was successful
 4. From the OpenShift Web Console, under *Other Resources*, you should now see that a *Jenkins* deployment was created and in the process of starting up:
 +
+image::https://github.com/ghoelzer-rht/ocp-rhoar-spring/blob/master/lab/images/spring-lab-jenkins1.png[]
++
 Once started, verify you can login to your Jenkins instance via the created Route using your OpenShift Credentials.  Select and review the Jenkins Pipeline Job created, and DSL for our Pipeline.
 +
+image::https://github.com/ghoelzer-rht/ocp-rhoar-spring/blob/master/lab/images/spring-lab-jenkins0.png[]
 5. From the OpenShift Web Console, select *Builds* then *Pipelines*, then our newly created *product-catalog-mvn-pipeline*
 +
 Under the *Actions* Drop Down on the upper right select *Edit*
 +
+image::https://github.com/ghoelzer-rht/ocp-rhoar-spring/blob/master/lab/images/spring-lab-pipeline1.png[]
++
 Review the Jenkins DSL for each Stage of the Pipeline, the following updates are needed for the Pipeline to execute against your specific project:
 +
-[source,bash]
+[source,text]
 ----
-Checkout Stage - Update the Git Repo to your personal repo that you forked from this Lab Repo
+Checkout Stage - Update the Git Repo to your personal repo that you forked from this Lab
 Smoke Test - Update the curl URL to the Route generated for your specific project
 Save your changes and then Start the Pipeline to verify successful execution
 ----
++
+image::https://github.com/ghoelzer-rht/ocp-rhoar-spring/blob/master/lab/images/spring-lab-pipeline2.png[]
 
 == Tag the product-catalog Image for Release
 
 In the previous step, our Build Pipeline introducted a Manual step used to trigger release of the current build.  In this step, we will "approve" the build for release and verify the image was successfully tagged:
 
 1. From the Web Console, under the product-catalog Application, click the *Tag and Relase* Pipeline step and allow the Stage to proceed.
-2. From the Web Console, select Builds, Images to display the existing Imagestreams.  Select the product-catalog imagestream and verify that there is a *latest* and *next-release* tag.
+2. From the Web Console, select *Builds*, *Images* to display the existing Imagestreams.  Select the product-catalog imagestream and verify that there is a *latest* and *next-release* tag.
++
+image::https://github.com/ghoelzer-rht/ocp-rhoar-spring/blob/master/lab/images/spring-lab-imagestream1.png[]
 
 == Optional Jenkins Build Pipeline optimizations
 To speed up your Jenkins Maven Build times, local Maven Mirrors can be used via the MAVEN_MIRROR_URL enivornment variable, added to your Build Pipeline Configuration.  Also, persistent storage can be added to your Jenkin's Slave Pod/Container, review the following blog for instructions - https://blog.openshift.com/decrease-maven-build-times-openshift-pipelines-using-persistent-volume-claim/
