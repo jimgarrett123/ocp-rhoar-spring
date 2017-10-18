@@ -11,9 +11,9 @@ In this lab, we will use an OpenShift Template to replicate the product-catalog 
 
 == Creating product-catalog Test Deployment
 
-In this step, we will use an YAML Template to generate a product-catalog Test deployment in our OpenShift project:
+In this step, we will use a YAML Template to generate a product-catalog Test deployment in our OpenShift project:
 
-1. From command line and where this project was cloned, navigate to the */lab/.openshift* directory
+1. From the command line and where this project was cloned, navigate to the */lab/.openshift* directory
 2. Ensure you are logged into OpenShift and your Lab Project, then execute the following *oc* command:
 +
 [source,bash]
