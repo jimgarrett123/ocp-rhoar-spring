@@ -9,7 +9,7 @@ In this lab, we will use an OpenShift Template to replicate the product-catalog 
 
 :numbered:
 
-== Creating product-catalog Test Deployment
+== Create the product-catalog Test Deployment
 
 In this step, we will use a YAML Template to generate a product-catalog Test deployment in our OpenShift project:
 
@@ -32,5 +32,18 @@ route "product-catalog-test" created
 3. From the OpenShift Web console, you should now see a new instance of the Product Catalog application deployed as "product-catalog-test".  Use the newly created *Route* to verify the Application, it shares the same Postgres DB as the initial deployment:
 +
 image::https://github.com/ghoelzer-rht/ocp-rhoar-spring/blob/master/lab/images/spring-lab-release1.png[]
+
+== Configure product-catalog-test for an A/B Test Deployment
+
+In this step, we will update the the product catalog app and before releasing it, use the ability of OpenShift Routes to split traffic across multiple OpenShift K8S Services to implement an A/B Test Deployment:
+
+1. Let's start by updating the version number in our Product Catalog List.  Edit the jsp page - /lab/src/main/resources/META-INF/resources/WEB-INF/jsp/productList.jsp and update the version number in the html *page-header* as shown below:
++
+[source,xml]
+----
+<div class="page-header">
+   <h1>Admin - Product List v1.01</h1>
+</div>
+----
 
 
