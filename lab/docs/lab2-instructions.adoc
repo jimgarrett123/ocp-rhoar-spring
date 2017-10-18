@@ -19,7 +19,7 @@ In this step, we will update the initially created Deployment Configuration, to 
 +
 image::https://github.com/ghoelzer-rht/ocp-rhoar-spring/blob/master/lab/images/spring-lab-dcupdate1.png[]
 
-== Creating product-catalog Build Pipeline
+== Create the product-catalog Build Pipeline
 
 In this step, we will create and update our Build Pipeline, deploying a Jenkins 2.0 instance into our OpenShift project:
 
