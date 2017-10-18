@@ -81,4 +81,8 @@ image::https://github.com/ghoelzer-rht/ocp-rhoar-spring/blob/master/lab/images/s
 
 2. To verify that all Browser sessions point to the latest application build, refresh the page used on both Browser windows we use for our A/B Test.  They should now both display *Admin - Product List v1.01*.
 
+3. Consider the following Scenario, the Testing team found an issue with the new release.  While the Testing team wants to continue verifying their new automated test suite against the current release, the Dev Team wants to fix/unit test the new features.  To keep our Delivery stream moving, let's update the *product-catalog-test* Route to fall-back to the current release.  Go back like we did previously and update/save the *product-catalog-test* so 100% of the traffic goes to the *product-catalog-test* Service.  After you save your changes, your Route Configuration should look like this:
+
+
+They should now both display *Admin - Product List v1.01*.
 
