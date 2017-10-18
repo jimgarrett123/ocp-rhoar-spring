@@ -46,4 +46,8 @@ In this step, we will update the the product catalog app and before releasing it
 </div>
 ----
 
+2. Kick-off the *product-catalog-mvn-pipeline* build pipeline, to create and deploy a new container image with our update.  *Do not* execute the Tag and Release step.  At this point, we should now have two versions of our Product Catalog application deployed, represented by the *latest* (new build at version 1.01) and *next-release* (original build at version 1.00).
+
+3. Go ahead and open both versions of the application in two different Browser tabs, using the *product-catalog* and *product-catalog-test* Routes and validate that they each display the different html page header.
+
 
