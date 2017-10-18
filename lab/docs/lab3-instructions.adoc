@@ -29,4 +29,8 @@ deploymentconfig "product-catalog-test" created
 service "product-catalog-test" created
 route "product-catalog-test" created
 ----
+3. From the OpenShift Web console, you should now see a new instance of the Product Catalog application deployed as "product-catalog-test".  Use the newly created *Route* to verify the Application, it shares the same Postgres DB as the initial deployment:
++
+image::https://github.com/ghoelzer-rht/ocp-rhoar-spring/blob/master/lab/images/spring-lab-release1.png[]
+
 
