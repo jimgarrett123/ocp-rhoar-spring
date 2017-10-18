@@ -73,3 +73,6 @@ image::https://github.com/ghoelzer-rht/ocp-rhoar-spring/blob/master/lab/images/s
 == Demonstrate a Blue/Green Product Catalog Deployment
 
 In this step, we will demonstrate a Blue/Green deployment, using the *product-catalog-test* application deployment within our OpenShift Project, leveraging the ability to split or direct http network traffic across multiple OpenShift/K8S Services:
+
+1. Now that we have created Product Catalog release 1.01, let's make that available to the our Testing team that is testing against our *product-catalog-test* Route, by forcing *all* traffic to use our latest application build.  Select *Applications*, *Routes*, then the *product-catalog-test* Route.  Edit the Route and update/save the configuration as shown below:
+
