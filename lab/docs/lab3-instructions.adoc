@@ -83,6 +83,8 @@ image::https://github.com/ghoelzer-rht/ocp-rhoar-spring/blob/master/lab/images/s
 
 3. Consider the following Scenario, the Testing team found an issue with the new release.  While the Testing team wants to continue verifying their new automated test suite against the current release, the Dev Team wants to fix/unit test the new features.  To keep our Delivery stream moving, let's update the *product-catalog-test* Route to fall-back to the current release.  Go back like we did previously and update/save the *product-catalog-test* so 100% of the traffic goes to the *product-catalog-test* Service.  After you save your changes, your Route Configuration should look like this:
 
++
+image::https://github.com/ghoelzer-rht/ocp-rhoar-spring/blob/master/lab/images/spring-lab-bluegreen2.png[]
 
-They should now both display *Admin - Product List v1.01*.
+Now refresh the page in each Browser session like we did previously, they should both display *Admin - Product List v1.00*.  Now both teams can continue on with their Development and Testing activities without interruption!
 
