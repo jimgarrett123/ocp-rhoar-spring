@@ -31,7 +31,7 @@ spec:
 
               node("maven") {
                 stage("Checkout") {
-                  git url: "https://github.com/ghoelzer-rht/ocp-rhoar-spring.git", branch: "master"
+                  git url: "https://github.com/jimgarrett123/ocp-rhoar-spring.git", branch: "master"
                 }
 
                 stage("Build Spring Boot JAR") {
