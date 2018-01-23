@@ -49,6 +49,7 @@ In this step, we will update the the product catalog app and before releasing it
 When finished with the document commit it back to the GitHub repository
 
 $ git commit -a
+
 $ git commit push
 
 2. Kick-off the *product-catalog-mvn-pipeline* build pipeline, to create and deploy a new container image with our update.  *Do not* execute the Tag and Release step.  At this point, we should now have two versions of our Product Catalog application deployed, represented by the *latest* (new build at version 1.01) and *next-release* (original build at version 1.00).
