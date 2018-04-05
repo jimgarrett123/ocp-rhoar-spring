@@ -45,7 +45,7 @@ spec:
                   openshiftDeploy deploymentConfig: "product-catalog"
                 }
                 stage("Smoke Test") {
-                  sh 'curl http://product-catalog-spring-rhoar-lab01.cloudapps.keyvan.com/admin/productlist | grep -i "Admin - Product List"'
+                  sh 'curl http://product-catalog-product-catalog.192.168.99.100.nip.io/admin/productlist | grep -i "Admin - Product List"'
                 }
               }
            }
